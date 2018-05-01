@@ -1,6 +1,7 @@
 import FormField from '../common/FormField';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { sanitizeValue } from './FieldUtils';
 
 const InputField = ({
   errors,
@@ -26,13 +27,6 @@ const InputField = ({
     label,
     labelClassName,
     required,
-  };
-
-  const sanitizeValue = (string, allowRegex) => {
-    const characterArray = string.split('');
-    return characterArray
-      .filter(character => character.match(allowRegex))
-      .join('');
   };
 
   const onChangeWrapper = event => {
@@ -81,4 +75,5 @@ InputField.propTypes = {
   type: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+
 export default InputField;

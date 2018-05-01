@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { sanitizeValue } from './common/FieldUtils';
 
-const InputComponent = props => {
+const extractErrorMessage = props => {
   let errorMessage = '';
   if (props.required || props.validationError) {
     errorMessage = props.validationErrorMessage;
@@ -10,7 +11,21 @@ const InputComponent = props => {
   if (props.serverError) {
     errorMessage = props.serverErrorMessage;
   }
+  return errorMessage;
+};
 
+const onChangeWrapper = (event, props) => {
+  if (event.target.value && props.allowCharacters) {
+    event.target.value = sanitizeValue(
+      event.target.value,
+      props.allowCharacters
+    );
+  }
+  props.onChange(event);
+};
+
+const InputComponent = props => {
+  const errorMessage = extractErrorMessage(props);
   return (
     <div className="form-group">
       <div
@@ -26,7 +41,7 @@ const InputComponent = props => {
             type={props.type}
             placeholder={props.placeholder}
             value={props.value}
-            onChange={props.onChange}
+            onChange={event => onChangeWrapper(event, props)}
             disabled={props.disabled}
             maxLength={props.maxLength}
           />
@@ -61,5 +76,6 @@ InputComponent.propTypes = {
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
   maxLength: PropTypes.number,
+  allowCharacters: PropTypes.instanceOf(RegExp),
 };
 export default InputComponent;
