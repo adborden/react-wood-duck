@@ -17,7 +17,7 @@
     "react"
   ],
   "scripts": {
-    "prepublish": "babel --plugins transform-es2015-modules-umd src --out-dir ./dist && node-sass src/styles/application.scss dist/styles/application.scss && node-sass src/styles/application.scss dist/styles/application.css && echo 'all dist copied.'",
+    "prepublish": "babel --plugins transform-es2015-modules-umd src --out-dir ./dist && node-sass src/styles/application.scss dist/styles/application.scss && node-sass src/styles/application.scss dist/styles/application.css && copyfiles -f ./src/fonts/* ./dist/fonts && echo 'all dist copied.'",
     "lint": "eslint ./{src,stories}",
     "lintfix": "eslint ./src --fix",
     "lint:configtest": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
