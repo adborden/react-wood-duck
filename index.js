@@ -24,6 +24,7 @@ var Layout01 = require('./dist/Layout01.js').default;
 var Layout03 = require('./dist/Layout03.js').default;
 var CommonAddressComponent = require('./dist/CommonAddressComponent.js')
   .default;
+var RelationCard = require('./dist/RelationCard.js').default;
 
 module.exports = {
   Alert: Alert,
@@ -51,4 +52,5 @@ module.exports = {
   Layout01: Layout01,
   Layout03: Layout03,
   CommonAddressComponent: CommonAddressComponent,
+  RelationCard: RelationCard,
 };

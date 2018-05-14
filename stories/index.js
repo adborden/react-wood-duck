@@ -2,6 +2,8 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../src/styles/application.scss';
 import './css/storybook.css';
+import 'react-bootstrap-table/css/react-bootstrap-table.css';
+
 // Stories
 import './About';
 import './Accessibility';
@@ -39,6 +41,7 @@ import './components/TextArea';
 import './components/person/AddressesForm';
 import './components/Race/RaceForm';
 import './components/Ethnicity/EthnicityForm';
+import './components/RelationCard';
 // Page Templates
 import './page-templates/LandingPageTemplate';
 import './page-templates/Category';
