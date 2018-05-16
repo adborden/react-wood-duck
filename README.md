@@ -51,6 +51,7 @@ The **react-wood-duck component library** is a set of re-usable components and s
   * Select/Multiselect
   * TextArea
   * Table
+  * RelationCard
 
 * Common
 
