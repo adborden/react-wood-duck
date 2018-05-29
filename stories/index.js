@@ -42,6 +42,8 @@ import './components/person/AddressesForm';
 import './components/Race/RaceForm';
 import './components/Ethnicity/EthnicityForm';
 import './components/RelationCard';
+import './components/ModalComponent';
+
 // Page Templates
 import './page-templates/LandingPageTemplate';
 import './page-templates/Category';
