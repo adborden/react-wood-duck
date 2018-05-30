@@ -26,13 +26,6 @@ describe('RelationCard', () => {
         .find('div')
         .at(1)
         .props().className
-    ).toEqual('focusChild');
-
-    expect(
-      component
-        .find('div')
-        .at(3)
-        .props().className
     ).toEqual('childName');
   });
 });
