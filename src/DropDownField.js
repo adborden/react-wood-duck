@@ -23,7 +23,7 @@ const DropDownField = props => {
 DropDownField.propTypes = {
   options: PropTypes.array,
   id: PropTypes.string,
-  selectedOption: PropTypes.string,
+  selectedOption: PropTypes.any,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   gridClassName: PropTypes.string,

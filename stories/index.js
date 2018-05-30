@@ -40,6 +40,7 @@ import './components/Table';
 import './components/TextArea';
 import './components/person/AddressesForm';
 import './components/Race/RaceForm';
+import './components/Relationship/EditRelationshipForm';
 import './components/Ethnicity/EthnicityForm';
 import './components/RelationCard';
 import './components/ModalComponent';
