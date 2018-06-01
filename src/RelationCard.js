@@ -3,29 +3,31 @@ import PropTypes from 'prop-types';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
 const propTypes = {
+  attachActions: PropTypes.func,
+  expandComponent: PropTypes.func,
+  expandColumnComponent: PropTypes.any,
   firstName: PropTypes.string,
+  isExpandableRow: PropTypes.func,
   lastName: PropTypes.string,
+  tableActions: PropTypes.func,
   data: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
       secondaryRelationship: PropTypes.string,
       ageBirth: PropTypes.string,
-      city: PropTypes.string,
-      tableActions: PropTypes.func,
     })
   ),
-  expandComponent: PropTypes.func,
-  expandColumnComponent: PropTypes.any,
-  isExpandableRow: PropTypes.func,
 };
 
 const RelationCard = ({
+  attachActions,
   firstName,
   lastName,
   data,
   isExpandableRow,
   expandComponent,
   expandColumnComponent,
+  tableActions,
 }) => {
   return (
     <div>
@@ -48,16 +50,15 @@ const RelationCard = ({
             Name
           </TableHeaderColumn>
           <TableHeaderColumn dataField="secondaryRelationship" width="30%">
-            Relationship to Focus Child
+            Relationship to Focus Person
           </TableHeaderColumn>
           <TableHeaderColumn dataField="ageBirth">Age</TableHeaderColumn>
-          <TableHeaderColumn dataField="city">City</TableHeaderColumn>
-          <TableHeaderColumn
-            dataField="tableActions"
-            expandable={false}
-            width="10%"
-          >
+          <TableHeaderColumn dataFormat={tableActions} expandable={false}>
             Actions
+          </TableHeaderColumn>
+
+          <TableHeaderColumn dataFormat={attachActions} expandable={false}>
+            Attach
           </TableHeaderColumn>
         </BootstrapTable>
       </div>
