@@ -1,7 +1,7 @@
 import React from 'react';
-import CheckboxField from '../../src/common/CheckboxField';
-import DropDownField from '../../src/DropDownField';
-import DateTimePicker from '../../src/DateTimePicker';
+import CheckboxField from '../common/CheckboxField';
+import DropDownField from '../DropDownField';
+import DateTimePicker from '../DateTimePicker';
 import PropTypes from 'prop-types';
 
 const propTypes = {
