@@ -26,6 +26,8 @@ var CommonAddressComponent = require('./dist/CommonAddressComponent.js')
   .default;
 var RelationCard = require('./dist/RelationCard.js').default;
 var ModalComponent = require('./dist/ModalComponent.js').default;
+var EditRelationshipForm = require('./dist/Relationship/EditRelationshipForm')
+  .default;
 
 module.exports = {
   Alert: Alert,
@@ -34,6 +36,7 @@ module.exports = {
   Cards: Cards,
   CheckboxRadioGroup: CheckboxRadioGroup,
   DropDownField: DropDownField,
+  EditRelationshipForm: EditRelationshipForm,
   EthnicityForm: EthnicityForm,
   InputComponent: InputComponent,
   AddAdditionalItem: AddAdditionalItem,
