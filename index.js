@@ -26,7 +26,7 @@ var CommonAddressComponent = require('./dist/CommonAddressComponent.js')
   .default;
 var RelationCard = require('./dist/RelationCard.js').default;
 var ModalComponent = require('./dist/ModalComponent.js').default;
-var EditRelationshipForm = require('./dist/Relationship/EditRelationshipForm')
+var EditRelationshipForm = require('./dist/Relationship/EditRelationshipForm.js')
   .default;
 
 module.exports = {
