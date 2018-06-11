@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
 const propTypes = {
-  attachActions: PropTypes.func,
   expandComponent: PropTypes.func,
   expandColumnComponent: PropTypes.any,
   firstName: PropTypes.string,
@@ -14,13 +13,11 @@ const propTypes = {
     PropTypes.shape({
       name: PropTypes.string,
       secondaryRelationship: PropTypes.string,
-      ageBirth: PropTypes.string,
     })
   ),
 };
 
 const RelationCard = ({
-  attachActions,
   firstName,
   lastName,
   data,
@@ -49,16 +46,15 @@ const RelationCard = ({
           <TableHeaderColumn dataField="name" isKey={true}>
             Name
           </TableHeaderColumn>
-          <TableHeaderColumn dataField="secondaryRelationship" width="30%">
+          <TableHeaderColumn dataField="secondaryRelationship">
             Relationship to Focus Person
           </TableHeaderColumn>
-          <TableHeaderColumn dataField="ageBirth">Age</TableHeaderColumn>
-          <TableHeaderColumn dataFormat={tableActions} expandable={false}>
+          <TableHeaderColumn
+            dataFormat={tableActions}
+            expandable={false}
+            width="20%"
+          >
             Actions
-          </TableHeaderColumn>
-
-          <TableHeaderColumn dataFormat={attachActions} expandable={false}>
-            Attach
           </TableHeaderColumn>
         </BootstrapTable>
       </div>
