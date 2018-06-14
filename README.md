@@ -43,7 +43,6 @@ The **react-wood-duck component library** is a set of re-usable components and s
   * InputComponent
   * ListItem
   * Link
-  * ModalComponent
   * NavLink
   * NavLinks
   * NavLinksContainer
@@ -52,7 +51,6 @@ The **react-wood-duck component library** is a set of re-usable components and s
   * Select/Multiselect
   * TextArea
   * Table
-  * RelationCard
 
 * Common
 
@@ -66,12 +64,7 @@ The **react-wood-duck component library** is a set of re-usable components and s
 
   * RaceForm
 
-* Relationship
-
-  *EditRelationshipForm
-
 * Person
-
   * AddressesForm
 
 ## Installation

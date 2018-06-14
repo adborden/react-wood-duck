@@ -4282,19 +4282,3 @@ li.navlink {
   background-color: transparent;
   border-right: 1px solid #e7e7e7 !important;
   padding-top: 1.5rem; }
-
-.childName {
-  padding-top: 3.5rem;
-  padding-left: 1.5rem; }
-
-.edit-relation-checkbox {
-  padding-top: 5rem; }
-
-.description {
-  padding-top: 5rem;
-  text-align: center; }
-
-.details {
-  text-align: center;
-  border-style: solid;
-  margin-top: 1rem; }
