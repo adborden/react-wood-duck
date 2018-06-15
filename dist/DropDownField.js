@@ -56,7 +56,7 @@
   DropDownField.propTypes = {
     options: _propTypes2.default.array,
     id: _propTypes2.default.string,
-    selectedOption: _propTypes2.default.string,
+    selectedOption: _propTypes2.default.any,
     onChange: _propTypes2.default.func,
     placeholder: _propTypes2.default.string,
     gridClassName: _propTypes2.default.string,
