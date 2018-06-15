@@ -1,6 +1,6 @@
 {
   "name": "react-wood-duck",
-  "version": "0.1.55",
+  "version": "0.1.69",
   "description": "The CWDS component library (react-wood-duck) is for all CWDS digital service teams to contribute to and use in order to provide a consistent look, feel, and behavior for the overall CWDS application.",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "react"
   ],
   "scripts": {
-    "prepublish": "babel --plugins transform-es2015-modules-umd src --out-dir ./dist && node-sass src/styles/application.scss dist/styles/application.scss && node-sass src/styles/application.scss dist/styles/application.css && echo 'all dist copied.'",
+    "prepublish": "babel --plugins transform-es2015-modules-umd src --out-dir ./dist && node-sass src/styles/application.scss dist/styles/application.scss && node-sass src/styles/application.scss dist/styles/application.css && copyfiles -f ./src/fonts/* ./dist/fonts && echo 'all dist copied.'",
     "lint": "eslint ./{src,stories}",
     "lintfix": "eslint ./src --fix",
     "lint:configtest": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
@@ -101,6 +101,8 @@
     "prettier": "^1.7.4",
     "prop-types": "^15.6.0",
     "react-autosuggest": "^9.3.2",
+    "react-bootstrap": "^0.32.1",
+    "react-bootstrap-table": "^4.3.1",
     "react-datetime": "^2.9.0",
     "react-overlays": "^0.8.3",
     "react-select": "^1.0.0-rc.5"

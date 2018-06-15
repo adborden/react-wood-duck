@@ -24,6 +24,10 @@ var Layout01 = require('./dist/Layout01.js').default;
 var Layout03 = require('./dist/Layout03.js').default;
 var CommonAddressComponent = require('./dist/CommonAddressComponent.js')
   .default;
+var RelationCard = require('./dist/RelationCard.js').default;
+var ModalComponent = require('./dist/ModalComponent.js').default;
+var EditRelationshipForm = require('./dist/Relationship/EditRelationshipForm.js')
+  .default;
 
 module.exports = {
   Alert: Alert,
@@ -32,6 +36,7 @@ module.exports = {
   Cards: Cards,
   CheckboxRadioGroup: CheckboxRadioGroup,
   DropDownField: DropDownField,
+  EditRelationshipForm: EditRelationshipForm,
   EthnicityForm: EthnicityForm,
   InputComponent: InputComponent,
   AddAdditionalItem: AddAdditionalItem,
@@ -51,4 +56,6 @@ module.exports = {
   Layout01: Layout01,
   Layout03: Layout03,
   CommonAddressComponent: CommonAddressComponent,
+  RelationCard: RelationCard,
+  ModalComponent: ModalComponent,
 };
